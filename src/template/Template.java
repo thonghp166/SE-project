@@ -1,10 +1,12 @@
-package template;
+package Template;
 
-import java.util.ArrayList;
+import javax.swing.*;
 
-public abstract class Template {
-    /* Get template's name */
-    public abstract String getName();
-    /* Get template's contents */
-    public abstract ArrayList<Content> getContents();
+public class Template {
+    JTextField[] formTextFields;
+    JLabel[] formLabels;
 }
+
+enum TemplateFormatType {
+    DATE, NUMBER, CUSTOM, NULL,
+};

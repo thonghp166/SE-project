@@ -1,4 +1,4 @@
-package template;
+package Template;
 
 /**
  * Class TemplateException used to handle user input exception

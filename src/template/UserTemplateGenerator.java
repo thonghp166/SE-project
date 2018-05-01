@@ -1,8 +1,9 @@
-package template;
+package Template;
 
 import BasicComponents.UIBorder;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 import javax.swing.border.TitledBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -47,8 +48,6 @@ public class UserTemplateGenerator extends JFrame {
     private JToolBar toolBar_templateGenerator;
     //Used for components identification
     private int key = 0;
-
-    private final JLabel customFormatTip = new JLabel("<html>#: kí tự số<br/>U: chữ cái(sẽ được viết hoa)</html>");
 
     /**
      * Public constructor
@@ -124,7 +123,7 @@ public class UserTemplateGenerator extends JFrame {
          * this is the demo version so the template will be written to file
          */
         try {
-            PrintWriter printWriter = new PrintWriter("template.txt", "UTF-8");
+            PrintWriter printWriter = new PrintWriter("Template.txt", "UTF-8");
             for (int i = 0; i < headers.size(); i++) {
                 printWriter.println(headers.get(i).getText() + " " + comboBoxes_templateFormats.get(i).getSelectedItem());
             }
@@ -226,7 +225,6 @@ public class UserTemplateGenerator extends JFrame {
                 String s = (String) comboBox_templateFormats.getSelectedItem();
                 if (s.equals(templateFormatTypes[3])) {
                     JTextField textField_format = new JTextField();
-                    //textField_format.setToolTipText(customFormatTip);
                     JOptionPane.showMessageDialog(null, textField_format, "Định dạng mới", JOptionPane.INFORMATION_MESSAGE);
                     comboBox_templateFormats.addItem(textField_format.getText());
                     comboBox_templateFormats.setSelectedItem(textField_format.getText());
