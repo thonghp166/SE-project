@@ -1,3 +1,4 @@
 # SE-project
 
-Hello IT Hero Team
+version 2 initial structure
+
